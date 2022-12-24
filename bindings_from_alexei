@@ -1,0 +1,18 @@
+bind-key    -T prefix \#    display-panes
+bind-key    -T prefix -     split-window -v -c "#{pane_current_path}"
+bind-key -r -T prefix /     resize-pane -R 5
+bind-key -r -T prefix <     resize-pane -D 5
+bind-key -r -T prefix >     resize-pane -U 5
+bind-key    -T prefix A     command-prompt -I "#W" { rename-window "%%" }
+bind-key    -T prefix S     command-prompt -I "#S" { rename-session "%%" }
+bind-key -r -T prefix Z     resize-pane -Z
+bind-key -r -T prefix \\    resize-pane -L 5
+bind-key    -T prefix c     new-window
+bind-key    -T prefix d     detach-client
+bind-key    -T prefix s     list-sessions
+bind-key -r -T prefix z     resize-pane -Z
+bind-key    -T prefix |     split-window -h -c "#{pane_current_path}"
+bind-key    -T prefix Up    select-pane -t :.-
+bind-key    -T prefix Down  select-pane -t :.+
+bind-key    -T prefix Left  previous-window
+bind-key    -T prefix Right next-window
